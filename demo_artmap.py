@@ -6,19 +6,22 @@ from artlib import FuzzyART, SimpleARTMAP, QuadraticNeuronART
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
-import umap.plot
+# import umap.plot
 
-blobfile = "clusterblobs_stddev_rho_accuracy.txt"
-irisfile = "cluster_iris_rho_accuracy.txt"
+from pathlib import Path
+
+blobfile = Path("data", "clusterblobs_stddev_rho_accuracy.txt")
+irisfile = Path("data", "cluster_iris_rho_accuracy.txt")
+
 def cluster_iris(rho):
-    from sklearn.model_selection import train_test_split
-    from sklearn.metrics import classification_report, accuracy_score
-    import umap.plot
+    # from sklearn.model_selection import train_test_split
+    # from sklearn.metrics import classification_report, accuracy_score
+    # import umap.plot
 
     data, target = load_iris(return_X_y=True)
     #print("Data has shape:", data.shape)
 
-    
+
     params = {"rho": rho, "alpha": 0.001, "beta": 1.0}
     art = FuzzyART(**params)
     # params = {
