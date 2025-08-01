@@ -8,6 +8,12 @@
 
 ## Usage
 
+This is a Python project, so a working Python environment is required.
+A virtual environment manager is recommended, such as [`mamba`](https://mamba.readthedocs.io/en/latest/index.html).
+For example, download the [miniforge distribution](https://github.com/conda-forge/miniforge) for your OS.
+
+Next, create a virtual environment like so:
+
 ```shell
 mamba create -n audrey python=3.12
 ```
