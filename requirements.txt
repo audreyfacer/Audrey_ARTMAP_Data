@@ -6,3 +6,11 @@ scikit-learn
 numba
 umap
 tqdm
+
+# umap.plot dependencies
+umap-learn
+bokeh
+datashader
+holoviews
+scikit-image
+colorcet

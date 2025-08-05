@@ -54,3 +54,17 @@ Show the available partitions and their resources:
 ```sh
 scontrol show partitions
 ```
+
+### Anvil Commands
+
+Interactive job:
+
+```sh
+sinteractive -p wholenode -N 2 -n 256 -A oneofyourallocations
+```
+
+For example:
+
+```sh
+sinteractive -p wholenode -N 2 -n 256 -A nairr240289-gpu
+```
