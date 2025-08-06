@@ -1,4 +1,4 @@
-#!/home/sap625/.local/bin/zsh
+#!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks=16
 #SBATCH -J DA-DIST
