@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH -J Audrey
+#SBATCH --time=1:00:00
+#SBATCH --mem-per-cpu=1000
+#SBATCH -o audrey-out.out
+#SBATCH -e audrey-err.err
+
+echo Job done!
