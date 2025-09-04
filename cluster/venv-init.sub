@@ -1,4 +1,4 @@
-#!/home/sap625/.local/bin/zsh
+#!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks=16
 #SBATCH -J DA-DIST
@@ -15,35 +15,42 @@
 PROJECT_DIR=$HOME/dev/Audrey_ARTMAP_Data
 
 # Date and current folder
-echo --- BEGINNING OF VENV SETUP ---
+# echo --- BEGINNING OF VENV SETUP ---
 date
 
 
-# This is the way to define variables in bash scripts
-ENV_NAME=audrey
-ENV_DIR=$HOME/.venv
-ENV_PATH=$END_DIR/$ENV_NAME
+# # This is the way to define variables in bash scripts
+# ENV_NAME=audrey
+# ENV_DIR=$HOME/.venv
+# ENV_PATH=$END_DIR/$ENV_NAME
 
 # We will make the directory .venv at the user home (~).
 # Putting your python virtual environments in .venv is good practice.
-mkdir -p $ENV_DIR
+# mkdir -p $ENV_DIR
 
 # Load the python module on the cluster
-module load python
+# module load python
 
-echo --- Instantiate and precompile ---
+# echo --- Instantiate and precompile ---
 
 # Run the venv script, creating the environment
-python3 -m venv $ENV_PATH
+# python3 -m venv $ENV_PATH
 
 # Activate the environment
-source $ENV_PATH/bin/activate
+# source $ENV_PATH/bin/activate
+
+source ~/.bash_common
+
+conda activate audrey
 
 which python
 
 # Install dependencies
-pip install -r requirements.txt
+# pip install -r requirements.txt
+
+python scripts/demo_artmap.py
 
 # End with echoes
-echo --- END OF PYTHON VENV SETUP ---
-echo All is quiet on the western front
+# echo --- END OF PYTHON VENV SETUP ---
+# echo All is quiet on the western front
+echo Done!

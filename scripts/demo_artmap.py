@@ -10,8 +10,8 @@ from sklearn.metrics import classification_report, accuracy_score
 
 from pathlib import Path
 
-blobfile = Path("..", "data", "clusterblobs_stddev_rho_accuracy.txt")
-irisfile = Path("..", "data", "cluster_iris_rho_accuracy.txt")
+blobfile = Path("data", "clusterblobs_stddev_rho_accuracy.txt")
+irisfile = Path("data", "cluster_iris_rho_accuracy.txt")
 
 def cluster_iris(rho):
     # from sklearn.model_selection import train_test_split
