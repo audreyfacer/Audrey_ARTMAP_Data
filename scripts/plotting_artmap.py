@@ -3,11 +3,11 @@ import pandas as pd
 
 #plots 2d graph of rho vs accuracy for each std dev in blob data set
 def plot_blobs_2d(filename):
-    data = pd.read_csv(filename, names = ["Std Dev", "Rho", "Accuracy"])
-    std_devs = set(data["Std Dev"])
+    data = pd.read_csv(filename, names = ["Std Dev", "Rho", "Accuracy"]) #reads data from filename and coverts it into a pandas dataframe
+    std_devs = set(data["Std Dev"]) #takes std dev column from pandas data and stores it in a set called std_devs
     rhos = set(data["Rho"])
-    fig, ax = plt.subplots()
-    for std_dev in std_devs:
+    fig, ax = plt.subplots()        
+    for std_dev in std_devs:    #for std dev in std devs set
         local_data = data[data["Std Dev"] == std_dev]
         ax.plot(
             local_data["Rho"],
